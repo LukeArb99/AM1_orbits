@@ -1,5 +1,5 @@
 
-from numpy  import array, zeros, dot
+from numpy  import array, zeros, dot, absolute, linalg
 import matplotlib.pyplot as plt
 
 ## FUNCION PARA KEPLER
@@ -11,10 +11,10 @@ import matplotlib.pyplot as plt
     
 #     return array([vx,vy,-x/mr, -y/mr])
 
-N=10000
+N=1000
 U=array([1,0,0,1])
 
-dt=0.001
+dt=0.01
 x=array(zeros(N))
 y=array(zeros(N))
 x[0]=U[0]
@@ -29,17 +29,42 @@ for i in range(0,N):
     x[i]=U[0]
     y[i]=U[1]
 
-
+plt.title("EULER")
 plt.plot(x,y)
 plt.show()
 
 ## CRANK-NICOLSON
 
+U=array([1,0,0,1])
+x[0]=U[0]
+y[0]=U[1]
+
 for i in range(0,N):
+
+    sigmaF = array([0,0,0,0])
     F1 = array([U[2], U[3], -U[0]/(U[0]**2+U[1]**2)**1.5, -U[1]/(U[0]**2+U[1]**2)**1.5])
-    F2 = 
+    F2 = array([U[2], U[3], -U[0]/(U[0]**2+U[1]**2)**1.5, -U[1]/(U[0]**2+U[1]**2)**1.5])
+    # F2 = array([0.1,0.1,0.1,0.1])
+    sigma = 1
+
+    while sigma >= dt*10:
+        # F2 = array([1.,1.,1.,1.])
+        F2 = F2 + sigmaF
+        U1 = U + 0.5*dt*(F1+F2)
+        F3 = array([U1[2], U1[3], -U1[0]/(U1[0]**2+U1[1]**2)**1.5, -U1[1]/(U1[0]**2+U1[1]**2)**1.5])
+        # print(F3)
+
+        sigmaF = F2-F3
+        sigma = linalg.norm(sigmaF)
     
     U = U + dt*(F1+F2)/2
+
+    x[i]=U[0]
+    y[i]=U[1]
+
+plt.title("CRANK-NICOLSON")
+plt.plot(x,y)
+plt.show()
 
 ## RK 4
 
@@ -66,5 +91,6 @@ for i in range(0,N):
     x[i]=U[0]
     y[i]=U[1]
 
+plt.title("RK4")
 plt.plot(x,y)
 plt.show()
