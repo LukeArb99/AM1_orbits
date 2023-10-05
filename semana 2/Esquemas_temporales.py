@@ -8,7 +8,7 @@ def Euler(U,dt,t,F):
 def Crank_Nicolson(U,dt,t,F):
 
     def G(x):
-     return x-U-dt/2*(F(U)+F(x))
+     return x-U-dt/2*(F(U,t)+F(x,t+dt))
     
     return newton(G,U)
     

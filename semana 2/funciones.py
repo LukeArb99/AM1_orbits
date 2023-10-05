@@ -11,7 +11,7 @@ def Problema_de_Cauchy(F,t,U0,Metodo):
     U[0,:]=U0
 
     for n in range(N):
-        U[n+1,:] = Metodo(U[n,:],t[n+1]-t[n],t[n],F)
+        U[:,n+1] = Metodo(U[:,n],t[n+1]-t[n],t[n],F)
 
     return U
 
