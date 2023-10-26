@@ -1,4 +1,4 @@
-from numpy import zeros, array
+from numpy import zeros, array, float64
 
 
 
@@ -6,9 +6,10 @@ def Problema_de_Cauchy(F,t,U0,Metodo):
 
     N=len(t)-1
     Nv=len(U0)
-    U=zeros(N+1,Nv)
+    U = zeros( (Nv, N+1), dtype=float64 ) 
 
-    U[0,:]=U0
+
+    U[:,0]=U0
 
     for n in range(N):
         U[:,n+1] = Metodo(U[:,n],t[n+1]-t[n],t[n],F)
@@ -21,3 +22,8 @@ def Kepler(U,t):
     mr = (x**2+y**2)**1.5
     
     return array([vx,vy,-x/mr, -y/mr])
+
+def funcion(U,t):
+    x=U[0]
+    y=U[1]
+    return array([3*x-2*y,2*x-2*y])
