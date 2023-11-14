@@ -14,13 +14,27 @@ def leer_archivo_como_string(nombre_archivo):
 nombre_archivo = 'semana 3\musica.txt'
 contenido_del_archivo = leer_archivo_como_string(nombre_archivo)
  
-# if contenido_del_archivo:
-#     print(contenido_del_archivo)
 
 lista = contenido_del_archivo.split('\n')
-print(lista)
+# print(lista)
 p = len(lista)
+# print(p)
+# p = 5
+lista = list(lista)
+lista_final=['***letra cancion****']
+for i in range(p):
+    if i%2==0:
+        lista_final.append(lista[i])
 
-for n in range(p):
 
+p =lista_final.index('[Verse 1]')
+
+for i in range(p-1):
+    lista_final.remove(lista_final[1])
+    
+
+
+h=len(lista_final)
+for i in range(h):
+    print(lista_final[i])
 

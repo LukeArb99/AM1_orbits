@@ -1,128 +1,127 @@
+***This is a simplified version for beginners***
+
+
 [Intro]
-F#m7 A  Esus4  B7sus4
-F#m7 A  Esus4  B7sus4
-F#m7 A  Esus4  B7sus4
-F#m7 A  Esus4  B7sus4
+Em   G   D   A7sus4
+Em   G   D   A7sus4
+Em   G   D   A7sus4
+Em   G   D   A7sus4
+
 
 [Verse 1]
-F#m7          A
-    Today is gonna be the day
-              Esus4                  B7sus4
+Em       G
+Today is gonna be the day
+              D                  A7sus4
 That they're gonna throw it back to you
-F#m7             A
-    By now you should've somehow
-    Esus4                B7sus4
+Em          G
+By now you should've somehow
+    D                A7sus4
 Realised what you gotta do
-F#m7                  A
+
+Em                   G
 I don't believe that anybody
- Esus4           B7sus4       D   Esus4   B7sus4
+ D           A7sus4              C D  A7sus4  A7sus4
 Feels the way I do about you now
 
+
 [Verse 2]
-F#m7              A
-    Backbeat the word is on the street
-          Esus4                 B7sus4
+Em           G
+Backbeat the word is on the street
+          D                 A7sus4
 That the fire in your heart is out
-F#m7                 A
-    I'm sure you've heard it all before
-          Esus4             B7sus4
+Em              G
+I'm sure you've heard it all before
+          D             A7sus4
 But you never really had a doubt
-F#m7                      A       Esus4
-    I don't believe that anybody feels
-           B7sus4       F#m7 A  Esus4  B7sus4
+Em                   G       D
+I don't believe that anybody feels
+           A7sus4            Em  G  D  A7sus4
 The way I do about you now
 
-[Pre-chorus]
-     D                Esus4            F#m
+
+[Pre-Chorus]
+     C                D            Em
 And all the roads we have to walk are winding
-     D                Esus4                F#m
+     C                D                Em
 And all the lights that lead us there are blinding
- D              Esus4
+ C              D
 There are many things that I would
-F#m7     Esus4  A
+G       D      Em
 Like to say to you
-       Esus4      B7sus4
+       D      A7sus4
 But I don't know how
 
+
 [Chorus]
-         D   F#m7 A
+         C    Em  G
 Because maybe
-        F#m7                  D     F#m7 A
-You're gonna be the one that saves me
-     F#m7  D  F#m7 A
+        Em                   C        Em  G
+You're gonna be the one that saves me?
+     Em   C  Em  G
 And after all
-           F#m7   D  F#m7 A  F#m7     A
+                Em  C  Em  G   Em
 You're my wonderwall
+
 
 [Verse 3]
-F#m7           A 
-    Today was gonna be the day
-             Esus4                  B7sus4
+Em        G
+Today was gonna be the day
+             D                  A7sus4
 But they'll never throw it back to you
-F#m7            A
-    By now you should've somehow
-    Esus4                    B7sus4
+Em         G
+By now you should've somehow
+    D                    A7sus4
 Realised what you're not to do
-F#m7                  A
+Em                   G
 I don't believe that anybody
-Esus4            B7sus4
+D            A7sus4
 Feels the way I do
-           F#m7 A  Esus4  B7sus4
+           Em  G  D  A7sus4
 About you now
 
-[Pre-chorus]
-     D                  Esus4              F#m
+
+[Pre-Chorus]
+     C                  D              Em
 And all the roads that lead you there are winding
-     D                   Esus4             F#m
+     C                   D             Em
 And all the lights that light the way are blinding
- D              Esus4               F#m7    Esus4  A
+ C              D                  G       D      Em
 There are many things that I would like to say to you
-       Esus4      B7sus4
+       D      A7sus4
 But I don't know how
 
+
 [Chorus]
-        D   F#m7 A
+        C    Em  G
 I said maybe
-        F#m7                 D      F#m7 A
-You're gonna be the one that saves me
-     F#m7  D  F#m7 A
+        Em                   C        Em  G
+You're gonna be the one that saves me?
+     Em   C  Em  G
 And after all
-           F#m7  D   F#m7 A  F#m
+           Em   C   Em  G  Em
 You're my wonderwall
-        D             F#m7  A
+        C             Em   G
 I said maybe (I said maybe)
-        F#m7                 D      F#m7 A
-You're gonna be the one that saves me
-     F#m7  D  F#m7 A
+        Em                   C        Em  G
+You're gonna be the one that saves me?
+     Em   C  Em  G
 And after all
-           F#m7  D   F#m7 A  F#m
+           Em   C   Em  G  Em
 You're my wonderwall
-        D             F#m7  A
+        C             Em   G
 I said maybe (I said maybe)
-        F#m7                  D              F#m7     A
-You're gonna be the one that saves me (that saves me)
-        F#m7                  D              F#m7     A
-You're gonna be the one that saves me (that saves me)
-        F#m7                  D              F#m7     A  F#m
-You're gonna be the one that saves me (that saves me)
+        Em                   C               Em      G
+You're gonna be the one that saves me? (that saves me)
+        Em                   C               Em      G
+You're gonna be the one that saves me? (that saves me)
+        Em                   C               Em      G  Em
+You're gonna be the one that saves me? (that saves me)
 
-[Outro]
 
-e|-------5-2-------|
-B|-3-2-3-----------|
-G|-----------------| x8
-D|-----------------|
-A|-----------------|
-E|-----------------|
-
-D  F#m7 A  F#m7
-D  F#m7 A  F#m7
-D  F#m7 A  F#m7
-D  F#m7 A  F#m7
-×To add strumming:
-Make strumming patterns to the song using the editor
-Press the “add strumming” button
-Each strumming once added, will be approved by the author, moderator, and user community before being published. Both strumming and tab authors will receive a corresponding notification. Usually, strummings are approved within 3-5 days.
-
-You will receive +5 IQ after your strumming is published.
-
+[Solo]
+e|--------3-0----|
+B|-1-0-1---------|
+G|---------------|
+D|---------------|   x8
+A|---------------|
+E|---------------|
