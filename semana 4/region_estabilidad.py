@@ -1,6 +1,6 @@
 from numpy import linspace,zeros,array,abs,transpose,float64
 import matplotlib.pyplot as plt
-from Esquemas_temporales import RK4, Euler_Implicito,Crank_Nicolson,Euler
+from Esquemas_temporales import RK4, Euler_Implicito,Crank_Nicolson,Euler,leapfrog
 
 def Region_estabilidad(Scheme,N,x0,xf,y0,yf):
     #Scheme===Esquema numerico
@@ -21,11 +21,12 @@ def Region_estabilidad(Scheme,N,x0,xf,y0,yf):
 
 
 def Test_Estabilidad():
-    schemes = [RK4, Euler_Implicito,Crank_Nicolson,Euler]
+    schemes = [RK4, Euler_Implicito,Crank_Nicolson,Euler,leapfrog]
 
     for scheme in schemes: 
       rho, x, y  = Region_estabilidad(scheme, 100, -4, 2, -4, 4)
       plt.contour( x, y, transpose(rho), linspace(0, 1, 11) )
+      plt.title(scheme)
       plt.axis('equal')
       plt.grid()
       plt.show()

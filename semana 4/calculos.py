@@ -1,5 +1,3 @@
-from numpy import zeros, float64
-
 
 
 def Problema_Couchy(F,t,U,Metodo):

@@ -1,6 +1,6 @@
-from numpy import array, zeros, reshape, shape, linspace, concatenate, split, ceil, sqrt    
+from numpy import array, zeros, reshape, linspace, concatenate, split, ceil, sqrt    
 from numpy.linalg import    norm
-from scipy.integrate import odeint, ode, solve_ivp
+from scipy.integrate import odeint
 import matplotlib.pyplot as plt
 from calculos import Problema_Couchy
 from Esquemas_temporales import RK4

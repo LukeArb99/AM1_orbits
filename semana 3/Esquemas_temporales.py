@@ -1,6 +1,7 @@
 from scipy.optimize import newton
 
 
+
 def Euler(U,dt,t,F):
     return U + dt*F(U,t)
 
@@ -26,13 +27,3 @@ def Euler_Implicito(U,dt,t,F):
       return x-U-dt*F(x,t)
    
    return newton(H,U)
-
-def leapfrog(U,dt,t,F):
-        # Paso 1
-    k1 = F(U, t)
-        # Paso 2
-    mid_x = U + 0.5 * dt * k1
-        # Paso 3
-    k2 = F(mid_x, t + 0.5 * dt)
-
-    return U + dt * k2
