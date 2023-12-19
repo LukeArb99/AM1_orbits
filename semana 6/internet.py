@@ -2,6 +2,8 @@ from scipy.optimize import newton
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.path as mpath
+from Probema_Cauchy import Problema_de_Cauchy
+from Esquemas_temporales import RK4
 
 
 # This code defines a nice shape for the center of mass of the system.
@@ -39,10 +41,29 @@ def collinear_lagrange(xstar, pi_2):
     third_term = pi_2 / np.abs(xstar - 1 + pi_2)**3 * (xstar - 1 + pi_2)
     return first_term - second_term - third_term
 
+def CR3BP(X, t):
+    # Implement the CR3BP equations of motion here
+    x,y,z,vx,vy,vz = [X[0],X[1],X[2],X[3],X[4],X[5]]
+    mu=0.012150586550569
+
+    d=np.sqrt((x-mu)**2+y**2+z**2)
+    r=np.sqrt((x-1+mu)**2+y**2+z**2)
+    dvxdt = x + 2 * vy - (1-mu) * ( x + mu )/d**3 - mu*(x-1+mu)/r**3
+    dvydt = y - 2 * vx - (1-mu) * y/d**3 - mu * y/r**3
+    dvzdt = - (1-mu)*z/d**3 - mu*z/r**3
+
+    return np.array([vx,vy,vz,dvxdt,dvydt,dvzdt])
+
 L_2 = newton(func=collinear_lagrange, x0=1, args=(pi_2,))
 L_1 = newton(func=collinear_lagrange, x0=0, args=(pi_2,))
 L_3 = newton(func=collinear_lagrange, x0=-1, args=(pi_2,))
 print(f"{L_1=}, {L_2=}, {L_3=}")
+
+d_t = 0.01
+N=10000
+t=np.linspace(0,N*d_t,N+1)
+U0 = np.array([0.8, 0.6, 0., 0., 0., 0.])
+U = Problema_de_Cauchy(CR3BP,t,U0,RK4)
 
 fig, ax = plt.subplots(figsize=(10,10), dpi=96)
 ax.set_xlabel("$x^*$")
@@ -65,5 +86,8 @@ ax.plot(-pi_2, 0, 'bo', label="$m_1$")
 ax.plot(1 - pi_2, 0, 'go', label="$m_2$")
 ax.legend()
 ax.set_aspect("equal")
+
+# Plot orbita
+ax.plot(U[0],U[1],'r')
 
 plt.show()
