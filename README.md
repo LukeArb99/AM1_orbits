@@ -15,4 +15,4 @@ Create:
 7. /semana 6/hito6.py cover milestone 6.
 
          
-4. Final presentation (slides+ report) in /doc/milestone7.pdf based on milestone 7. (14th-15th week) 
+8. Final presentation (slides+ report) in /Hito7
