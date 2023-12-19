@@ -40,9 +40,6 @@ def leapfrog(U,dt,t,F):
     return U + dt * k2
 
 def Embedded_RK( U, dt, t, F,): 
-  
-    #(a, b, bs, c) = Butcher_array(q)
-    #a, b, bs, c = Butcher_array(q)
  
     N_stages = { 2:2, 3:4, 8:13  }
     q=8

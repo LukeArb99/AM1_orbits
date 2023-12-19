@@ -6,39 +6,14 @@ from math import log
 def Intervalos_Escala(x,E1,tau):
     '''
     x = solucion en x del sistema
-    delta = division del tono, se supone que va de 0 a 0.5
-    k = numero de octavas: 0<=k<7
-    chi = estructura de la escala
+    E1 = escala
     tau = tono musical
     o = octava -- cogemos 3
     '''
     k=7
-    '''Generacion de Escala'''
     lamnbda= 1/2
 
-    # p=int(6*k/lamnbda)
-
-    # S=[]
-    # E=[]
-    # V=[]
     x1=zeros(len(x))
-
-    # #Escala de intervalos
-    # for i in range(0,p):
-    #     S.append(2**(i*lamnbda/6))
-
-    # ##hallar el vector binario V
-    # for i in range(0,p):
-    #     if chi[i] in S:         ##Aqui va la estructura de la escala tonal del cual no se el formato 
-    #         V.append(1)
-    #     else:
-    #         V.append(0)
-
-    # for i in range(0,p):
-
-    #     E.append(S[i]*V[i])
-    
-    # E1 = list(filter(lambda x: x != 0, E))
 
     '''Normalizacion de la variable'''
     alpha = (2**k-1)/(max(x)-min(x))
@@ -56,7 +31,7 @@ def Intervalos_Escala(x,E1,tau):
                 D[i,j]=0
             else:
                 D[i,j]=x1[i]
-    print("D = ", D)
+
     L=[]
     for i in range(0,len(x1)):
         L.append(min(D[i,:]))
@@ -67,7 +42,6 @@ def Intervalos_Escala(x,E1,tau):
     F=[]
     for i in range(0,len(x1)):
         F.append(f*L[i])
-    print("F = ", F)
 
     '''valores de la frecuencia para MIDI'''
     theta=[]
@@ -79,7 +53,6 @@ def Intervalos_Escala(x,E1,tau):
     theta2=[]
     for i in range(0,len(theta)):
         theta2.append(round(theta[i]))
-    #print(y2)
     return asarray(theta2)
 
 
@@ -103,17 +76,14 @@ def Ritmo(y,tp):
     alpha = (max(R)-min(R))/(max(y)-min(y))
     beta = -alpha*min(y)+min(R)
     y1 = zeros(len(y))
-    #print("y output = ", y)
 
     for i in range(0,len(y)):
         y1[i] = alpha*y[i]+beta
-    #print(y1)
 
     '''Redondeo a valor proximo'''
     y2=[]
     for i in range(0,len(y)):
         y2.append(round(y1[i]))
-    #print(y2)
 
     '''Conversion a MIDI'''
     Y=[]
